@@ -1,9 +1,5 @@
 
-<<<<<<< Updated upstream
-# Encoder Lab 9 COP3502C
-=======
-# Decoder Lab 9 COP3502C by Zhijie Yuan and Gabriel Wong
->>>>>>> Stashed changes
+
 
 def encode_password(password):
     encoded_password = ""
@@ -22,14 +18,7 @@ def decode(password: str) -> str:
         decoded_password += str(decoded)
     return decoded_password
 
-def decode(password: str) -> str:
-    decoded_password = ' '
-    for i in password:
-        decoded = int(i) - 3
-        if decoded < 0:
-            decoded = decoded + 10
-        decoded_password += str(decoded)
-    return decoded_password
+
 
 
 def main():
@@ -44,16 +33,15 @@ def main():
 
         if choice == '1':
             password = input("Please enter your password to encode: ")
-            encoded_password = encode(password)
-            print(f"Your password has been encoded and stored! Encoded password: {encoded_password}")
+            encoded_password = encode_password(password)
+            print(f"Your password has been encoded and stored!\n")
 
         elif choice == '2':
-            encoded_password = input("Please enter the encoded password to decode: ")
             decoded_password = decode(encoded_password)
-            print(f"The encoded password is {encoded_password}, and the original password is {decoded_password}.")
+            print(f"The encoded password is {encoded_password}, and the original password is {decoded_password}.\n")
 
         elif choice == '3':
-            print("Exiting program.")
+
             break
 
         else:
